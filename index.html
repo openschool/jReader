@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!-- 
+  https://stackoverflow.com/questions/3896537/should-i-size-a-textarea-with-css-width-height-or-html-cols-rows-attributes
+  -->
+<textarea readonly>
+  "Russians have been disconnected from their rear,” 
+the senior European official said, 
+pointing to the logistical conundrum 
+that could tilt the contest 
+in favor of the slow-moving Ukrainian forces. 
+“So [you] can have an excellent defensive position, 
+but if you don't have ammunition and food, 
+then it is a beautifully defensible grave.”
+</textarea>
+<input id="3" type="text"  />
+<button id="4">comment</button>  
+<script>
+// based on https://stackoverflow.com/questions/67319522/virtual-keyboard-popup-onfocus-of-a-text-field
+
+//document.elementFromPoint(document.querySelector("textarea").getBoundingClientRect().x, document.querySelector("textarea").getBoundingClientRect().y).dispatchEvent("click");
+// document.querySelector("input").focus();
+// document.querySelector("input").click();
+document.getElementById("3").style.visibility = "hidden";  
+document.getElementById("4").addEventListener("click",openKeyboard);
+function openKeyboard(){
+  document.getElementById("3").style.visibility = "visible"; 
+  document.querySelector("input").focus();
+}
+</script>
+  
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+</body>
+
+</html>
